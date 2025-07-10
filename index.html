@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolas Technologies, LLC - Technology Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+        }
+        /* Custom styles for subtle shadows and rounded corners */
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo 600 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* Indigo 700 */
+        }
+        .btn-secondary {
+            background-color: #e0e7ff; /* Indigo 100 */
+            color: #4f46e5; /* Indigo 600 */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #c7d2fe; /* Indigo 200 */
+            color: #3730a3; /* Indigo 800 */
+        }
+        .nav-link {
+            color: #4b5563; /* Gray 600 */
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1f2937; /* Gray 900 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-700">Consolas Technologies</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#services" class="nav-link font-medium">Services</a>
+                <a href="#about" class="nav-link font-medium">About Us</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#home" class="nav-link text-2xl font-medium" onclick="toggleMobileMenu()">Home</a>
+            <a href="#services" class="nav-link text-2xl font-medium" onclick="toggleMobileMenu()">Services</a>
+            <a href="#about" class="nav-link text-2xl font-medium" onclick="toggleMobileMenu()">About Us</a>
+            <a href="#contact" class="nav-link text-2xl font-medium" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32 text-center rounded-b-xl mx-auto mt-4 max-w-7xl card">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Innovate. Optimize. Accelerate.
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                Consolas Technologies delivers expert software development, cloud native engineering, and enterprise AI consulting services to drive your business forward.
+            </p>
+            <a href="#contact" class="btn-secondary inline-block text-indigo-800 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-50 transition duration-300 ease-in-out">
+                Get a Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service Card 1: Software Development -->
+                <div class="bg-white p-8 card text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Software Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Custom software solutions tailored to your unique business needs, from web and mobile applications to complex enterprise systems.
+                    </p>
+                    <a href="#contact" class="btn-primary inline-block font-medium">Learn More</a>
+                </div>
+
+                <!-- Service Card 2: Cloud Native Engineering -->
+                <div class="bg-white p-8 card text-center">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Cloud Native Engineering</h3>
+                    <p class="text-gray-600 mb-6">
+                        Expertise in cloud-native infrastructure, application lifecycle management (deploy/undeploy/upgrade), and observability for AWS, Azure, GCP, and On-Prem environments.
+                    </p>
+                    <a href="#contact" class="btn-primary inline-block font-medium">Learn More</a>
+                </div>
+
+                <!-- Service Card 3: Enterprise AI Consulting -->
+                <div class="bg-white p-8 card text-center">
+                    <div class="text-red-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10V8a2 2 0 012-2h10a2 2 0 012 2v2m-3 2h3m-3 0a1 1 0 01-1 1H9a1 1 0 01-1-1m-4 0h4m-3 2v4m-2-2h4m5-2v4m-2-2h4m-3 2v4m-2-2h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Enterprise AI Consulting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Unlock the power of Artificial Intelligence with strategic insights and practical implementation for your enterprise.
+                    </p>
+                    <a href="#contact" class="btn-primary inline-block font-medium">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">About Consolas Technologies</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Consolas Technologies, LLC is a dedicated technology services practice committed to empowering businesses with cutting-edge solutions. We specialize in transforming complex challenges into innovative opportunities through expert software development, strategic cloud native engineering, and advanced enterprise AI solutions. Our mission is to deliver tangible value and drive sustainable growth for our clients.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                With a focus on partnership and excellence, our team brings deep industry knowledge and technical prowess to every project. We believe in building long-term relationships by providing reliable, scalable, and impactful technology services that align with your business objectives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section (before footer) -->
+    <section class="bg-indigo-700 text-white py-16 md:py-20 text-center rounded-t-xl mx-auto mt-4 max-w-7xl card">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                Let's discuss how Consolas Technologies can help you achieve your goals with our expert services.
+            </p>
+            <a href="#contact" class="btn-secondary inline-block text-indigo-800 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-50 transition duration-300 ease-in-out">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Get in Touch</h2>
+            <form class="bg-white p-8 card">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="your.email@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="service" class="block text-gray-700 text-sm font-bold mb-2">Interested Service</label>
+                    <select id="service" name="service" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Select a Service</option>
+                        <option value="software-development">Software Development</option>
+                        <option value="cloud-native-engineering">Cloud Native Engineering</option>
+                        <option value="enterprise-ai">Enterprise AI Consulting</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Tell us about your project or inquiry..."></textarea>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="btn-primary font-bold shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 Consolas Technologies, LLC. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden'); // Prevent scrolling when menu is open
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+    </script>
+</body>
+</html>
